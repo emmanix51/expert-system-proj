@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourist spo recommender</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#92B974",
+              secondary: "#475347",
+              cream: "#E6EFE1",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-cream">
+    <header class="w">
+      <img
+        src="assets/logo.png"
+        class="size-20 mx-auto my-4 hover:animate-spin"
+      />
+    </header>
+    <h1 class="text-xl flex justify-center">Tourist Spot Recommender</h1>
+    <p class="flex justify-center">
+      Answer the following questions to find your ideal tourist spot:
+    </p>
+
+    <div id="question1">
+      <p class="flex justify-center">
+        Question 1: Do you prefer mountain scenery?
+      </p>
+      <div class="flex justify-center">
+        <button
+          class="text-black mx-5 px-3 border-2 border-gray-400 hover:bg-gray-400 hover:text-white"
+          onclick="answerQuestion('yes')"
+        >
+          Yes
+        </button>
+        <button
+          class="text-black mx-5 px-3 border-2 border-gray-400 hover:bg-gray-400 hover:text-white"
+          onclick="answerQuestion('no')"
+        >
+          No
+        </button>
+      </div>
+    </div>
+
+    <div id="question2" style="display: none">
+      <p class="flex justify-center">
+        Question 2: Do you enjoy walking around parks
+      </p>
+      <div class="flex justify-center">
+        <button
+          class="text-black mx-5 px-3 border-2 border-gray-400 hover:bg-gray-400 hover:text-white"
+          onclick="answerQuestion('yes')"
+        >
+          Yes
+        </button>
+        <button
+          class="text-black mx-5 px-3 border-2 border-gray-400 hover:bg-gray-400 hover:text-white"
+          onclick="answerQuestion('no')"
+        >
+          No
+        </button>
+      </div>
+    </div>
+
+    <div id="question3" style="display: none">
+      <p class="flex justify-center">
+        Question 3: Are you interested in visiting iligan landmarks?
+      </p>
+      <div class="flex justify-center">
+        <button
+          class="text-black mx-5 px-3 border-2 border-gray-400 hover:bg-gray-400 hover:text-white"
+          onclick="answerQuestion('yes')"
+        >
+          Yes
+        </button>
+        <button
+          class="text-black mx-5 px-3 border-2 border-gray-400 hover:bg-gray-400 hover:text-white"
+          onclick="answerQuestion('no')"
+        >
+          No
+        </button>
+      </div>
+    </div>
+
+    <div id="question4" style="display: none">
+      <p class="flex justify-center">
+        Question 4: Do you like body of water activities or view?
+      </p>
+      <div class="flex justify-center">
+        <button
+          class="text-black mx-5 px-3 border-2 border-gray-400 hover:bg-gray-400 hover:text-white"
+          onclick="answerQuestion('yes')"
+        >
+          Yes
+        </button>
+        <button
+          class="text-black mx-5 px-3 border-2 border-gray-400 hover:bg-gray-400 hover:text-white"
+          onclick="answerQuestion('no')"
+        >
+          No
+        </button>
+      </div>
+    </div>
+
+    <p class="flex justify-center" id="result"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
